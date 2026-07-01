@@ -1,0 +1,36 @@
+def merge_sorted_lists(l1, l2):
+    new_list = []
+
+    # Add all elements from the first list
+    for number in l1:
+        new_list.append(number)
+
+    # Add all elements from the second list
+    for number in l2:
+        new_list.append(number)
+
+    # Sort the new list
+    new_list.sort()
+
+    return new_list
+
+
+# Ask the user to enter the first list
+list1 = input("Enter the first sorted list (separate numbers with spaces): ")
+list1 = list1.split()
+
+# Ask the user to enter the second list
+list2 = input("Enter the second sorted list (separate numbers with spaces): ")
+list2 = list2.split()
+
+# Convert the values to integers
+for i in range(len(list1)):
+    list1[i] = int(list1[i])
+
+for i in range(len(list2)):
+    list2[i] = int(list2[i])
+
+# Merge the lists
+result = merge_sorted_lists(list1, list2)
+
+print("Merged list:", result)
