@@ -1,0 +1,29 @@
+def is_palindrome(text):
+    new_text = ""
+
+    # Remove spaces and symbols, and make everything lowercase
+    for ch in text:
+        if ch.isalnum():
+            new_text += ch.lower()
+
+    reverse = ""
+
+    # Reverse the text
+    for ch in new_text:
+        reverse = ch + reverse
+
+    # Check if both are the same
+    if new_text == reverse:
+        return True
+    else:
+        return False
+
+
+# Ask the user to enter text
+text = input("Enter a text: ")
+
+# Check if it is a palindrome
+if is_palindrome(text):
+    print("It is a palindrome.")
+else:
+    print("It is not a palindrome.")
