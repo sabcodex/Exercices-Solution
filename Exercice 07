@@ -1,0 +1,17 @@
+def sum_of_evens(lst):
+    total = 0
+
+    for number in lst:
+        if number % 2 == 0:
+            total = total + number
+
+    return total
+
+
+numbers = input("Enter numbers separated by spaces: ")
+numbers = numbers.split()
+
+for i in range(len(numbers)):
+    numbers[i] = int(numbers[i])
+
+print("Sum of even numbers:", sum_of_evens(numbers))
